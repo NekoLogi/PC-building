@@ -5,8 +5,247 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PC_building"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="PC-Builder" Height="514.286" Width="345.405" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="White" BorderBrush="#FF292929">
+    <Grid x:Name="Win1C" Background="White">
+        <TabControl x:Name="Builder_Tab" HorizontalAlignment="Left" Height="483" VerticalAlignment="Top" Width="331" Cursor="Arrow" FontSize="18" Background="#00000000" BorderBrush="#FFACACAC" Foreground="Black">
+            <TabItem x:Name="ET_C" Header="Erstellen">
+                <Grid x:Name="ETabColor" Background="#FFE5E5E5">
+                    <TabControl x:Name="EETabColor" Margin="10,10,0,10" Width="305" RenderTransformOrigin="0.5,0.5" Background="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center" UseLayoutRounding="False" TabStripPlacement="Right">
+                        <TabItem x:Name="CTabColor" Header="CPU">
+                            <Grid x:Name="EECTabColor" Background="#FFE5E5E5" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                <Label x:Name="CCPUN" Content="CPU Name" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_CPU_Name_" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="TextBox_TextChanged"/>
+                                <Label x:Name="CCPUK" Content="Kerne" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Kerne_" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Kerne__TextChanged"/>
+                                <Label x:Name="CCPUT" Content="Threads" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Threads_" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Threads__TextChanged"/>
+                                <Label x:Name="CCPUM" Content="Marke" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_CPU_Marke_" HorizontalAlignment="Left" Height="23" Margin="10,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_CPU_Marke__TextChanged"/>
+                                <Label x:Name="CCPUV" Content="V-Core" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_VCore_" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_VCore__TextChanged"/>
+                                <Label x:Name="CCPUW" Content="Watt" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_CPU_Watt_" HorizontalAlignment="Left" Height="23" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_CPU_Watt__TextChanged"/>
+                                <Label x:Name="CCPUB" Content="Base Clock" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Base_Clock" HorizontalAlignment="Left" Height="23" Margin="10,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Base_Clock_TextChanged"/>
+                                <Label x:Name="CCPUC" Content="Turbo Clock" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Turbo_Clock" HorizontalAlignment="Left" Height="23" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Turbo_Clock_TextChanged"/>
+                                <Label x:Name="CCPUS" Content="Sockel" HorizontalAlignment="Left" Margin="10,372,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Sockel" HorizontalAlignment="Left" Height="23" Margin="10,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Sockel_TextChanged"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="MBTabColor" Header="Mainboard" Margin="0,-2,0,0">
+                            <Grid x:Name="EEMBTabColor" Background="#FFE5E5E5">
+                                <Label x:Name="MBH" Content="Hersteller" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_Manuf" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_Manuf_TextChanged"/>
+                                <Label x:Name="MBM" Content="Model" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_Model" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_Model_TextChanged"/>
+                                <Label x:Name="MBF" Content="Formfaktor" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_f_Factor" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_f_Factor_TextChanged"/>
+                                <Label x:Name="MRAM" Content="Max. RAM" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_RAM" HorizontalAlignment="Left" Height="23" Margin="10,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_RAM_TextChanged"/>
+                                <Label x:Name="MN" Content="Model Nummer" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_Model_Num" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_Model_Num_TextChanged"/>
+                                <Label x:Name="CS" Content="CPU Sockel" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_Sockel" HorizontalAlignment="Left" Height="23" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_Marke_TextChanged"/>
+                                <Label x:Name="RAMT" Content="RAM Typ" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_RAM_Typ" HorizontalAlignment="Left" Height="23" Margin="10,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_RAM_Typ_TextChanged"/>
+                                <Label x:Name="MG" Content="Mainboard Größe" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_Size" HorizontalAlignment="Left" Height="23" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_Size_TextChanged"/>
+                                <Label x:Name="Des" Content="Details" HorizontalAlignment="Left" Margin="10,372,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_MB_Details" HorizontalAlignment="Left" Height="23" Margin="10,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_MB_Details_TextChanged"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="RAMTabColor" Header="RAM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="99">
+                            <Grid x:Name="EERAMTabColor" Background="#FFE5E5E5">
+                                <Label x:Name="RH" Content="Hersteller" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_RAM_Manuf" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_RAM_Manuf_TextChanged"/>
+                                <Label x:Name="RS" Content="RAM Speed" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_RAM_Speed" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_RAM_Speed_TextChanged"/>
+                                <Label x:Name="RMN" Content="Model Nummer" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_RAM_Model_Num" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_RAM_Model_Num_TextChanged"/>
+                                <Label x:Name="RM" Content="Name" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_RAM_Name" HorizontalAlignment="Left" Height="23" Margin="10,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_RAM_Name_TextChanged"/>
+                                <Label x:Name="SG" Content="Speichergröße" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_RAM_Size" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_RAM_Size_TextChanged"/>
+                                <Label x:Name="ST" Content="Speicher Typ" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_RAM_Typus" HorizontalAlignment="Left" Height="23" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_RAM_Typus_TextChanged"/>
+                                <Label x:Name="PF" Content="Pufferung" HorizontalAlignment="Left" Margin="-14,296,0,0" VerticalAlignment="Top" Width="101" Height="28" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <Label x:Name="ECC" Content="ECC" HorizontalAlignment="Left" Margin="-30,322,0,0" VerticalAlignment="Top" Width="101" Height="28" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <CheckBox x:Name="Checkbox2" Content="" HorizontalAlignment="Left" Margin="71,328,0,0" VerticalAlignment="Top" Height="18" Width="20" RenderTransformOrigin="-1,1.111" Checked="CheckBoxECC_Checked" Unchecked="CheckBoxECC_Unchecked"/>
+                                <CheckBox x:Name="CheckBoxBuffer" Content="" HorizontalAlignment="Left" Margin="71,303,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.6,0.957" Checked="CheckBoxBuffer_Checked" Unchecked="CheckBoxBuffer_Unchecked"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="GPUTabColor" Header="GPU" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="99">
+                            <Grid x:Name="EEGTabColor" Background="#FFE5E5E5">
+                                <Label x:Name="GN" Content="GPU Name" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Name" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Name_TextChanged"/>
+                                <Label x:Name="GM" Content="Marke" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Marke" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Marke_TextChanged"/>
+                                <Label x:Name="GW" Content="Watt" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Watt" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Watt_TextChanged"/>
+                                <Label x:Name="GH" Content="Hersteller" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Manuf" HorizontalAlignment="Left" Height="23" Margin="10,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Manuf_TextChanged"/>
+                                <Label x:Name="GS" Content="Speichergröße" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Size" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Size_TextChanged"/>
+                                <Label x:Name="GST" Content="Speicher Typ" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Typ" HorizontalAlignment="Left" Height="23" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Typ_TextChanged"/>
+                                <Label x:Name="GCC" Content="Core Clock" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Core_Clock" HorizontalAlignment="Left" Height="23" Margin="10,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Core_Clock_TextChanged"/>
+                                <Label x:Name="GBC" Content="Boost Clock" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Boost_Clock" HorizontalAlignment="Left" Height="23" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Boost_Clock_TextChanged"/>
+                                <Label x:Name="GMC" Content="Memory Clock" HorizontalAlignment="Left" Margin="10,372,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_GPU_Mem_Clock" HorizontalAlignment="Left" Height="23" Margin="10,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_GPU_Mem_Clock_TextChanged"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="CaseTabColor" Header="Case" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="99">
+                            <Grid x:Name="EECaseTabColor" Background="#FFE5E5E5">
+                                <Label x:Name="CH" Content="Hersteller" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Manuf" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Manuf_TextChanged"/>
+                                <Label x:Name="CM" Content="Model" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Model" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Model_TextChanged"/>
+                                <Label x:Name="CCT" Content="Case Typ" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Typ" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Typ_TextChanged"/>
+                                <Label x:Name="CMN" Content="Model Nummer" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Model_Num" HorizontalAlignment="Left" Height="23" Margin="10,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Model_Num_TextChanged"/>
+                                <Label x:Name="CFF" Content="Formfaktor" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Ffactor" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Ffactor_TextChanged"/>
+                                <Label x:Name="CG" Content="Case Größe" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Size" HorizontalAlignment="Left" Height="23" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Size_TextChanged"/>
+                                <Label x:Name="CG1" Content="Gewicht" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Weight" HorizontalAlignment="Left" Height="23" Margin="10,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Weight_TextChanged"/>
+                                <Label x:Name="CL" Content="Lüfter" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Fan" HorizontalAlignment="Left" Height="23" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Fan_TextChanged"/>
+                                <Label x:Name="Desu" Content="Details" HorizontalAlignment="Left" Margin="10,372,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_Case_Details" HorizontalAlignment="Left" Height="23" Margin="10,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_Case_Details_TextChanged"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="PSUTabColor" Header="PSU" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="99">
+                            <Grid x:Name="EEPTabColor" Background="#FFE5E5E5">
+                                <Label x:Name="PH" Content="Hersteller" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Manuf" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Manuf_TextChanged"/>
+                                <Label x:Name="PM" Content="Model" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Model" HorizontalAlignment="Left" Height="23" Margin="10,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Model_TextChanged"/>
+                                <Label x:Name="PFF" Content="Formfaktor" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Ffaktor" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Ffaktor_TextChanged"/>
+                                <Label x:Name="PMN" Content="Model Nummer" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Model_Num" HorizontalAlignment="Left" Height="23" Margin="10,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Model_Num_TextChanged"/>
+                                <Label x:Name="PPG" Content="PSU Größe" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Size" HorizontalAlignment="Left" Height="23" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Size_TextChanged"/>
+                                <Label x:Name="PW" Content="Watt" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Watt" HorizontalAlignment="Left" Height="23" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Watt_TextChanged"/>
+                                <Label x:Name="PEFF" Content="Effizienz" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Effizienz" HorizontalAlignment="Left" Height="23" Margin="10,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Effizienz_TextChanged"/>
+                                <Label x:Name="Des_" Content="Details" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="178" Height="45" FontSize="12" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <TextBox x:Name="txt_PSU_Details" HorizontalAlignment="Left" Height="23" Margin="10,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" TextChanged="Txt_PSU_Details_TextChanged"/>
+                                <Label x:Name="nMd" Content="non Mod" HorizontalAlignment="Left" Margin="-2,382,0,0" VerticalAlignment="Top" Width="52" Height="23" FontSize="10" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <CheckBox x:Name="Non_Mod_CheckBox" Content="" HorizontalAlignment="Left" Margin="46,387,0,0" VerticalAlignment="Top" Height="18" Width="17" Checked="Nonmod_Checked"/>
+                                <Label x:Name="HM" Content="Half Mod" HorizontalAlignment="Left" Margin="64,382,0,0" VerticalAlignment="Top" Width="52" Height="23" FontSize="10" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <CheckBox x:Name="Half_Mod_CheckBox" Content="" HorizontalAlignment="Left" Margin="112,387,0,0" VerticalAlignment="Top" Height="18" Width="17" Checked="HalfMod_Checked"/>
+                                <Label x:Name="FM" Content="Full Mod" HorizontalAlignment="Left" Margin="130,382,0,0" VerticalAlignment="Top" Width="56" Height="23" FontSize="10" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <CheckBox x:Name="Full_Mod_CheckBox" Content="" HorizontalAlignment="Left" Margin="178,387,0,0" VerticalAlignment="Top" Height="18" Width="16" RenderTransformOrigin="0.529,0.583" Checked="FullMod_Checked"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <Button x:Name="CPU_B" Content="CPU" HorizontalAlignment="Left" Margin="219,209,0,0" VerticalAlignment="Top" Width="90" Height="31" Click="CPU_" FontSize="16"/>
+                    <Button x:Name="MB_B" Content="Mainboard" HorizontalAlignment="Left" Margin="219,245,0,0" VerticalAlignment="Top" Width="90" Height="31" Click="MB_" FontSize="16"/>
+                    <Button x:Name="RAM_B" Content="RAM" HorizontalAlignment="Left" Margin="219,281,0,0" VerticalAlignment="Top" Width="90" Height="31" Click="RAM_" FontSize="16"/>
+                    <Button x:Name="GPU_B" Content="GPU" HorizontalAlignment="Left" Margin="219,317,0,0" VerticalAlignment="Top" Width="90" Height="31" Click="GPU_" FontSize="16"/>
+                    <Button x:Name="Case_B" Content="Case" HorizontalAlignment="Left" Margin="219,353,0,0" VerticalAlignment="Top" Width="90" Height="31" Click="Case_" FontSize="16"/>
+                    <Button x:Name="PSU_B" Content="PSU" HorizontalAlignment="Left" Margin="219,389,0,0" VerticalAlignment="Top" Width="90" Height="31" Click="PSU_" FontSize="16"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="AT_C" Header="Auslesen">
+                <Grid x:Name="ATab" Background="#FFE5E5E5">
+                    <TabControl Margin="10,10,0,10" Width="305" RenderTransformOrigin="0.5,0.5" Background="White" HorizontalAlignment="Left" HorizontalContentAlignment="Center" UseLayoutRounding="False">
+                        <TabItem x:Name="APT_Tab" Header="Profile" Margin="-2,-2,-76,0">
+                            <Grid x:Name="AP_Tab" Background="#FFE5E5E5" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                <ComboBox x:Name="APL_Box" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="210" Loaded="APL_Box_Loaded"/>
+                                <ListBox x:Name="SaveP_Box" HorizontalAlignment="Left" Height="307" Margin="10,74,0,0" VerticalAlignment="Top" Width="279" FontSize="14"/>
+                                <Label x:Name="PName" Content="Profile" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="279" Height="35" FontSize="18" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                                <Button x:Name="AP_B" Content="..." HorizontalAlignment="Left" Margin="225,39,0,0" VerticalAlignment="Top" Width="64" Height="30" Click="AP_Bn" FontSize="16"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="AKT_Tab" Header="Komponente" Margin="75,-2,-111,0">
+                            <Grid x:Name="AK_Tab" Background="#FFE5E5E5">
+                                <ComboBox x:Name="AKL_Box" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="279"/>
+                                <ListBox x:Name="SaveK_Box" HorizontalAlignment="Left" Height="307" Margin="10,74,0,0" VerticalAlignment="Top" Width="279" FontSize="14"/>
+                                <Button x:Name="AK_B" Content="..." HorizontalAlignment="Left" Margin="225,4,0,0" VerticalAlignment="Top" Width="64" Height="30" Click="AK_Bn" FontSize="16"/>
+                                <ComboBox x:Name="AKLP_Box" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Width="210" Loaded="AKLP_Box_Loaded"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="BT_C" Header="Builder" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True" Margin="-2,0,-10,0">
+                <Grid x:Name="TabColor" Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="319*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox x:Name="CPU_MarkeBox" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="142" Height="22" FontSize="12" Loaded="CPU_MarkeBox_Loaded" BorderBrush="#FFACACAC"/>
+                    <Label x:Name="LC_Marke" Content="CPU Marke" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="142" Height="23" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" Foreground="Black"/>
+                    <ComboBox x:Name="CPU_NameBox" HorizontalAlignment="Left" Margin="158,20,0,0" VerticalAlignment="Top" Width="142" Height="22" FontSize="12"/>
+                    <Label x:Name="L_CPU" Content="CPU" HorizontalAlignment="Left" Margin="158,0,0,0" VerticalAlignment="Top" Width="142" Height="23" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="MB_MarkeBox" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="142" Height="23" FontSize="12" Loaded="MB_MarkeBox_Loaded"/>
+                    <Label x:Name="MBC_Marke" Content="MB Marke" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="MB_NameBox" HorizontalAlignment="Left" Margin="158,62,0,0" VerticalAlignment="Top" Width="142" Height="23" FontSize="12"/>
+                    <Label x:Name="MB_C" Content="Mainboard" HorizontalAlignment="Left" Margin="158,42,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="RAM_SpeedBox" Margin="10,105,184,0" VerticalAlignment="Top" Height="23" FontSize="12"/>
+                    <Label x:Name="RAMC_Speed" Content="RAM Speed" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="RAM_NameBox" HorizontalAlignment="Left" Margin="158,105,0,0" VerticalAlignment="Top" Width="142" Height="23" FontSize="12"/>
+                    <Label x:Name="RAM_C" Content="RAM" HorizontalAlignment="Left" Margin="158,85,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="GPU_MarkeBox" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="142" Height="23" FontSize="12" Loaded="GPU_MarkeBox_Loaded"/>
+                    <Label x:Name="LG_Marke" Content="GPU Marke" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="GPU_NameBox" HorizontalAlignment="Left" Margin="158,148,0,0" VerticalAlignment="Top" Width="103" Height="23" FontSize="12"/>
+                    <Label x:Name="L_GPU" Content="GPU" HorizontalAlignment="Left" Margin="158,128,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="Case_MarkeBox" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" Width="142" Height="25" FontSize="12" Loaded="Case_MarkeBox_Loaded"/>
+                    <Label x:Name="LCase_Marke" Content="Case Marke" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="Case_NameBox" HorizontalAlignment="Left" Margin="158,191,0,0" VerticalAlignment="Top" Width="142" Height="25" FontSize="12"/>
+                    <Label x:Name="L_Case" Content="Case" HorizontalAlignment="Left" Margin="158,171,0,0" VerticalAlignment="Top" Width="142" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="RAM_MengeBox" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Width="39" Height="22" RenderTransformOrigin="1.882,0.9" FontSize="10" Loaded="RAM_MengeBox_Loaded"/>
+                    <Label x:Name="LRAM_Menge" Content="RAM Slots" HorizontalAlignment="Left" Margin="49,222,0,0" VerticalAlignment="Top" Width="107" Height="24" FontSize="11" VerticalContentAlignment="Stretch"/>
+                    <Label x:Name="WaküC" Content="Wakü-Unterstützung" HorizontalAlignment="Left" Margin="7,294,0,0" VerticalAlignment="Top" Width="111" Height="26" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <CheckBox x:Name="Pump_EnableBox" Content="" HorizontalAlignment="Left" Margin="123,299,0,0" VerticalAlignment="Top" Height="18" Width="20" Checked="Pump_EnableBox_Checked" Unchecked="Pump_EnableBox_Unchecked"/>
+                    <ComboBox x:Name="ATA_MengeBox" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Width="39" Height="22" RenderTransformOrigin="1.882,0.9" FontSize="10" Loaded="ATA_MengeBox_Loaded"/>
+                    <Label x:Name="L_ATA_Menge" Content="S-ATA / P-ATA Menge" HorizontalAlignment="Left" Margin="47,246,0,0" VerticalAlignment="Top" Width="116" Height="26" FontSize="11" VerticalContentAlignment="Stretch"/>
+                    <ComboBox x:Name="Fan_MengeBox" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="39" Height="22" RenderTransformOrigin="1.882,0.9" FontSize="10" Loaded="Fan_MengeBox_Loaded"/>
+                    <Label x:Name="LFAN" Content="Lüfter Menge" HorizontalAlignment="Left" Margin="49,270,0,0" VerticalAlignment="Top" Width="107" Height="29" FontSize="11" VerticalContentAlignment="Stretch"/>
+                    <ComboBox x:Name="Pump_MengeBox" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Width="34" Height="22" RenderTransformOrigin="1.882,0.9" FontSize="12" IsEnabled="False" Loaded="Pump_MengeBox_Loaded"/>
+                    <Label x:Name="LP" Content="Pumpen Menge" HorizontalAlignment="Left" Margin="44,318,0,0" VerticalAlignment="Top" Width="112" Height="29" FontSize="11" VerticalContentAlignment="Stretch"/>
+                    <Label x:Name="HW_OCL" Content="Hardware Übertakten" HorizontalAlignment="Left" Margin="7,342,0,0" VerticalAlignment="Top" Width="115" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <CheckBox x:Name="HW_OC_EnableBox" Content="" HorizontalAlignment="Left" Margin="123,347,0,0" VerticalAlignment="Top" Height="18" Width="20"/>
+                    <TextBox x:Name="Wattzahl_TextBox" Margin="18,392,233,27" TextWrapping="Wrap" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" Background="Black" Foreground="White"/>
+                    <Label x:Name="Watt1L" Content="Watt&#xD;&#xA;Watt" HorizontalAlignment="Left" Margin="86,392,0,0" VerticalAlignment="Top" Width="42" Height="28" FontSize="14" VerticalContentAlignment="Stretch" Foreground="Red" FontWeight="Bold"/>
+                    <ComboBox x:Name="PSU_WattBox" HorizontalAlignment="Left" Margin="245,224,0,0" VerticalAlignment="Top" Width="64" Height="20" FontSize="12" Loaded="PSU_WattBox_Loaded"/>
+                    <Label x:Name="PSU_L" Content="PSU Watt" HorizontalAlignment="Left" Margin="163,221,0,0" VerticalAlignment="Top" Width="98" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="Watt3L" Content="Mindestmenge" HorizontalAlignment="Left" Margin="18,376,0,0" VerticalAlignment="Top" Width="68" Height="19" FontSize="7" VerticalContentAlignment="Stretch" Foreground="Red" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="Watt2L" Content="Empfohlene" HorizontalAlignment="Left" Margin="14,368,0,0" VerticalAlignment="Top" Width="68" Height="19" FontSize="7" VerticalContentAlignment="Stretch" Foreground="Red" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                    <ComboBox x:Name="PSU_NameBox" HorizontalAlignment="Left" Margin="163,262,0,0" VerticalAlignment="Top" Width="146" Height="21" FontSize="12"/>
+                    <Label x:Name="PSL" Content="PSU" HorizontalAlignment="Left" Margin="163,242,0,0" VerticalAlignment="Top" Width="146" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <Rectangle x:Name="Save3L" Fill="#00E5E5E5" HorizontalAlignment="Left" Height="77" Margin="163,309,0,0" Stroke="Black" VerticalAlignment="Top" Width="146"/>
+                    <Button x:Name="Cal" Content="Berechnen" HorizontalAlignment="Left" Margin="178,404,0,0" VerticalAlignment="Top" Width="131" FontSize="14" Click="Cal_Click"/>
+                    <Label x:Name="Save2L" Content="Profil Name" HorizontalAlignment="Left" Margin="163,309,0,0" VerticalAlignment="Top" Width="146" Height="24" FontSize="11" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <TextBox x:Name="txt_SP" HorizontalAlignment="Left" Height="23" Margin="168,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+                    <Button x:Name="Save_B1" Content="Speichern" HorizontalAlignment="Left" Margin="168,357,0,0" VerticalAlignment="Top" Width="136" FontSize="14" Click="Save_B1_Click_1"/>
+                    <Label x:Name="Save1L" Content="Build Speichern" HorizontalAlignment="Left" Margin="163,288,0,0" VerticalAlignment="Top" Width="146" Height="24" FontSize="10" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+                    <Button x:Name="CPU_B1" Content="..." HorizontalAlignment="Center" Margin="300,20,0,0" VerticalAlignment="Top" Width="15" Height="22" FontSize="14" Click="CPU_B1_Click"/>
+                    <Button x:Name="MB_B1" Content="..." HorizontalAlignment="Center" Margin="302,62,2,0" VerticalAlignment="Top" Width="15" Height="23" FontSize="14" Click="MB_B1_Click_1"/>
+                    <Button x:Name="RAM_B1" Content="..." HorizontalAlignment="Right" Margin="0,105,2,0" VerticalAlignment="Top" Width="15" Height="23" FontSize="14" Click="RAM_B1_Click_1"/>
+                    <Button x:Name="GPU_B1" Content="..." HorizontalAlignment="Right" Margin="0,148,2,0" VerticalAlignment="Top" Width="15" Height="23" FontSize="14" Click="GPU_B1_Click_1"/>
+                    <Button x:Name="Case_B1" Content="..." HorizontalAlignment="Center" Margin="302,191,2,0" VerticalAlignment="Top" Width="15" Height="25" FontSize="14" Click="Case_B1_Click_1"/>
+                    <Button x:Name="PSU_B1" Content="..." HorizontalAlignment="Center" Margin="161,221,136,0" VerticalAlignment="Top" Width="22" Height="25" FontSize="14" Click="PSU_B1_Click_1"/>
+                    <ComboBox x:Name="GPU_MengeBox" HorizontalAlignment="Left" Margin="262,148,0,0" VerticalAlignment="Top" Width="38" Height="23" RenderTransformOrigin="1.882,0.9" FontSize="12" Loaded="GPU_MengeBox_Loaded"/>
+                    <Button x:Name="RAM_B2" Content="..." HorizontalAlignment="Center" Margin="137,105,167,0" VerticalAlignment="Top" Width="15" Height="23" FontSize="14" Click="RAM_B2_Click"/>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+        <Menu Height="24" Margin="246,3,17,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#FFF0F0F0" BorderBrush="Black" TextOptions.TextFormattingMode="Display" BorderThickness="1">
+            <MenuItem Header="Erweitert" Height="24" Width="60" RenderTransformOrigin="0.5,0.5">
+                <MenuItem x:Name="DarkMode" Header="Dark Mode" Height="19" Click="DarkMode_Click"/>
+                <MenuItem Header="Help" Height="19" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Infos" Height="19" Click="MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
